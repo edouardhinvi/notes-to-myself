@@ -1,1 +1,10 @@
+Recherche d'informations utilisateur dans LDAP
 
+Prérequis :
+  - Un shell avec utilisateur root
+
+Premièrement, il faut configurer la variable d'environnement KRB5CCNAME 
+export KRB5CCNAME=/var/lib/sss/db/ccache_ACME.LOCAL
+
+Ensuite, vous recherchez l'utilisateur avec la commande suivante : 
+ldapsearch -H ldap://srv_ldap.acme.local -Y GSSAPI -N -b "DC=ACME,DC=SVC" "(sAMAccountName=user_01)"
