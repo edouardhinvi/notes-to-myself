@@ -1,1 +1,9 @@
+Comment maintenir à jour un dépôt en downstream
 
+1. Ajout du dépôt downstream
+
+`$ git remote add upstream [Upstream git URL]`
+
+2. Mise à jour du dépôt
+
+`git push downstream [branch]`
